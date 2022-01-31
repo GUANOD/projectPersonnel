@@ -1,0 +1,12 @@
+.container {
+  margin: 20px auto;
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background-color: var(--main-tcolor);
+  border-radius: 10px;
+  z-index: 100;
+  backdrop-filter: blur(25px);
+}

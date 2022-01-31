@@ -1,0 +1,138 @@
+.searchBar {
+  position: fixed;
+  bottom: 0;
+  left: 300px;
+  right: 0;
+  display: grid;
+  place-items: center;
+  height: 125px;
+  background-color: var(--thr-tcolor);
+  backdrop-filter: blur(25px);
+  z-index: 1000;
+}
+
+.loupe {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  left: -30px;
+}
+
+/* TODO: SEARCHBAR WIDTH ON MOBILE */
+
+.search,
+.date,
+.rech {
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 5px;
+}
+
+.search {
+  width: 30vw;
+  font-size: 1.3rem;
+}
+.rech {
+  background-color: var(--acc-color);
+  cursor: pointer;
+}
+
+.rech:hover {
+  background-color: #e66129;
+}
+
+.article {
+  width: 400px;
+  margin: 20px 0px;
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+}
+
+.picCont {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.picCont img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoContainer {
+  text-align: center;
+}
+
+.infoContainer * {
+  margin: 10px;
+  color: var(--thr-color);
+}
+
+.desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dateX {
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 50%;
+  border: 5px solid var(--acc-color);
+  color: var(--acc-color);
+  background-color: var(--thr-color);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+  .searchBar {
+    left: 0;
+  }
+  .search {
+    width: 50vw;
+  }
+
+  .date {
+    width: 100px;
+  }
+}
+
+@media (max-width: 460px) {
+  .article {
+    width: 300px;
+    /* min-height: 400px; */
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 580px) {
+  .searchBar form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .searchBar form input,
+  .searchBar form button {
+    /* height: 40%; */
+    margin: 0;
+  }
+}

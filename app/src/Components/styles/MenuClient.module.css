@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+.client {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  height: calc(100vh - 75px);
+  width: 300px;
+  background-color: var(--main-color);
+  padding-top: 0px;
+}
+
+.li {
+  display: flex;
+  place-items: center;
+  box-sizing: border-box;
+  list-style-type: none;
+  width: 90%;
+  height: 70px;
+  border-radius: 7.5px;
+  margin: 5px;
+}
+
+.li:not(.active):hover {
+  background-color: rgba(3, 3, 0, 0.287);
+}
+
+.li button {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  border: 0;
+  padding: 0;
+  padding-left: 10px;
+  background-color: inherit;
+  color: var(--acc-color);
+}
+
+.cont {
+  display: flex;
+  place-items: center;
+  padding-left: 30px;
+}
+
+.ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.dashboard {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  top: 75px;
+  left: 300px;
+  width: calc(100vw - 300px);
+  height: calc(100vh - 75px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.backgroundWrap {
+  position: fixed;
+  top: 75px;
+  right: 0;
+  width: calc(100vw - 300px);
+  height: calc(100vh - 75px);
+}
+
+.burguer {
+  position: absolute;
+  top: calc(75px / 2);
+  left: 50px;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--acc-tcolor);
+  border-radius: 5px;
+  opacity: 0;
+  z-index: 100000;
+}
+
+.slash {
+  position: relative;
+  width: 70%;
+  height: 3px;
+  background: var(--thr-color);
+  border-radius: 100px;
+}
+
+.slash:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  background: var(--thr-color);
+  border-radius: 100px;
+}
+
+.slash:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 100%;
+  background: var(--thr-color);
+  border-radius: 100px;
+}
+
+.burguer:hover {
+  background: var(--acc-color);
+}
+.active {
+  background-color: var(--thr-color);
+}
+.burguerActive {
+  background-color: var(--thr-tcolor);
+}
+
+.slashActive {
+  background: var(--acc-color);
+}
+.slashActive:before {
+  background: var(--acc-color);
+}
+.slashActive:after {
+  background: var(--acc-color);
+}
+.burguerActive:hover {
+  background: var(--thr-color);
+}
+.linksMedia:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 80%;
+  height: 2px;
+  background-color: var(--acc-color);
+}
+
+.linksMedia {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  list-style-type: none;
+  /* opacity: 0; */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  padding: 0;
+}
+
+.linksMedia li {
+  padding: 10px 0;
+  margin-left: 20%;
+}
+
+.linksMedia li a,
+.linksMedia li p {
+  display: inline;
+  margin: 0;
+  text-decoration: none;
+  color: var(--acc-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.linksMedia .hidden {
+  display: none;
+}
+
+.shamelessPlug,
+.delete,
+.dec {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shamelessPlug {
+  bottom: 0;
+}
+.shamelessPlug a {
+  text-decoration: none;
+  font-style: italic;
+  color: var(--thr-color);
+  font-family: "Allison", cursive;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.delete {
+  bottom: 50px;
+}
+.dec {
+  bottom: 100px;
+}
+.svg {
+  fill: var(--acc-color);
+  stroke: var(--acc-color);
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.confirmModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 50vh;
+  min-width: 300px;
+  background-color: var(--main-tcolor);
+  border-radius: 10px;
+  backdrop-filter: blur(40px);
+  z-index: 100000;
+}
+
+@media (max-width: 1000px) {
+  .client {
+    opacity: 0;
+  }
+
+  .dashboard {
+    width: 100%;
+    left: 0;
+  }
+
+  .clientOpen {
+    opacity: 1;
+    width: 100%;
+    z-index: 10000;
+  }
+
+  .backgroundWrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .linksMedia .hidden {
+    display: block;
+  }
+}

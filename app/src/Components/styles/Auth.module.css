@@ -1,0 +1,92 @@
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  place-items: center;
+  padding: 30px 0;
+  min-height: 300px;
+  width: clamp(300px, 60vw, 800px);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(50, 61, 78, 0.7);
+  box-shadow: var(--main-tcolor) 5px 5px 20px;
+}
+
+.h2 {
+  color: var(--thr-color);
+  font-size: 40px;
+}
+
+.form {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  width: 80%;
+  border-bottom: 2px solid var(--acc-color);
+  color: var(--acc-color);
+}
+
+.input {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  z-index: 10;
+  color: var(--thr-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.input:focus,
+.input:active {
+  outline: none;
+  background-color: transparent;
+}
+
+.hover {
+  position: relative;
+  transform: translatey(-20px);
+  font-size: 12px;
+}
+
+.label {
+  position: relative;
+  height: 20px;
+  bottom: -30px;
+}
+
+.hover,
+.label {
+  transition: all 0.1s linear;
+}
+
+.button {
+  background: transparent;
+  padding: 5px 20px;
+  margin-top: 30px;
+  border: 2px solid var(--acc-color);
+  border-radius: 3px;
+  color: var(--thr-color);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.create {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--thr-color);
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}

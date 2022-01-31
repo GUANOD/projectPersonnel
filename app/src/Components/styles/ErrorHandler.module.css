@@ -1,0 +1,30 @@
+.container {
+  z-index: 1000000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-tcolor);
+  border-radius: 10px;
+  backdrop-filter: blur(40px);
+}
+
+.submit {
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  border: 5px solid var(--acc-color);
+  color: var(--acc-color);
+  background-color: var(--thr-color);
+  font-size: 1.2rem;
+}
+
+.submit:hover {
+  color: #cf511b;
+  border: 5px solid #cf511b;
+  cursor: pointer;
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+
+.container {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 200vw;
+  height: calc(100vh - 75px);
+  background-color: var(--main-color);
+  z-index: 10000;
+}
+
+.li {
+  display: flex;
+  place-items: center;
+  box-sizing: border-box;
+  list-style-type: none;
+  width: 90%;
+  height: 70px;
+  border-radius: 7.5px;
+  margin: 5px;
+}
+.cont {
+  display: flex;
+  place-items: center;
+  padding-left: 30px;
+}
+
+.li:not(.active):hover {
+  background-color: rgba(3, 3, 0, 0.287);
+}
+
+.li button {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  border: 0;
+  padding: 0;
+  padding-left: 10px;
+  background-color: inherit;
+  color: var(--acc-color);
+}
+
+.ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 50%;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+.active {
+  background-color: var(--thr-color);
+}
+.shamelessPlug {
+  position: absolute;
+  margin: 0;
+  left: 25%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.shamelessPlug a {
+  text-decoration: none;
+  font-style: italic;
+  color: var(--thr-color);
+  font-family: "Allison", cursive;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+@media (max-width: 800px) {
+  .container {
+    width: 100vw;
+  }
+  .ul {
+    width: 100%;
+  }
+  .shamelessPlug {
+    left: 50%;
+  }
+}

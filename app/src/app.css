@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,900&display=swap");
+
+:root {
+  --main-color: #323d4e;
+  --sec-color: #3c79af;
+  --thr-color: #e5dfd9;
+  --acc-color: #e5835a;
+
+  --main-tcolor: rgba(50, 61, 78, 0.5);
+  --sec-tcolor: rgba(60, 121, 175, 0.5);
+  --thr-tcolor: rgba(229, 223, 217, 0.3);
+  --acc-tcolor: rgba(229, 132, 90, 0.7);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #181e27;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  z-index: 100000000000;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-color);
+  z-index: 10000000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--acc-color);
+  border-radius: 10px;
+  z-index: 10000000000;
+}
